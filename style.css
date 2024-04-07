@@ -1,0 +1,291 @@
+/* Root Styles */
+:root {
+    --penguin-face: white;             /* Define face color variable */
+    --penguin-picorna: orange;         /* Define picorna color variable */
+    --penguin-skin: gray;              /* Define skin color variable */
+  }
+  
+  /* Body Styles */
+  body {
+    background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222)); /* Gradient background */
+    margin: 0;                        /* Reset margin */
+    padding: 0;                       /* Reset padding */
+    width: 100%;                      /* Full width */
+    height: 100vh;                    /* Full viewport height */
+    overflow: hidden;                 /* Hide overflow */
+  }
+  
+  /* Left Mountain Styles */
+  .left-mountain {
+    width: 300px;                     /* Set width */
+    height: 300px;                    /* Set height */
+    background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255)); /* Gradient background */
+    position: absolute;               /* Positioning */
+    transform: skew(0deg, 44deg);     /* Skew transformation */
+    z-index: 2;                       /* Z-index */
+    margin-top: 100px;                /* Margin top */
+  }
+  
+  /* Back Mountain Styles */
+  .back-mountain {
+    width: 300px;                     /* Set width */
+    height: 300px;                    /* Set height */
+    background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255)); /* Gradient background */
+    position: absolute;               /* Positioning */
+    z-index: 1;                       /* Z-index */
+    transform: rotate(45deg);         /* Rotation transformation */
+    left: 110px;                      /* Left positioning */
+    top: 225px;                       /* Top positioning */
+  }
+  
+  /* Sun Styles */
+  .sun {
+    width: 200px;                     /* Set width */
+    height: 200px;                    /* Set height */
+    background-color: yellow;         /* Background color */
+    position: absolute;               /* Positioning */
+    border-radius: 50%;               /* Border radius for circle */
+    top: -75px;                       /* Top positioning */
+    right: -75px;                     /* Right positioning */
+  }
+  
+  /* Penguin Styles */
+  .penguin {
+    width: 300px;                     /* Set width */
+    height: 300px;                    /* Set height */
+    margin: auto;                     /* Center horizontally */
+    margin-top: 75px;                 /* Margin top */
+    z-index: 4;                       /* Z-index */
+    position: relative;               /* Positioning */
+    transition: 1s ease-in-out 0ms;   /* Transition effect */
+  }
+  
+  .penguin * {
+    position: absolute;               /* Absolute positioning for children */
+  }
+  
+  .penguin:active {
+    transform: scale(1.5);            /* Scale transformation on active state */
+    cursor: not-allowed;              /* Cursor style */
+  }
+  
+  /* Penguin Head Styles */
+  .penguin-head {
+    width: 50%;                       /* Set width */
+    height: 45%;                      /* Set height */
+    background: linear-gradient(45deg, var(--penguin-skin), rgb(239, 240, 228)); /* Gradient background */
+    border-radius: 70% 70% 65% 65%;   /* Border radius */
+    top: 10%;                         /* Top positioning */
+    left: 25%;                        /* Left positioning */
+    z-index: 1;                       /* Z-index */
+  }
+  
+  /* Face Styles */
+  .face {
+    width: 60%;                       /* Set width */
+    height: 70%;                      /* Set height */
+    background-color: var(--penguin-face); /* Background color from variable */
+    border-radius: 70% 70% 60% 60%;   /* Border radius */
+    top: 15%;                         /* Top positioning */
+  }
+  
+  .face.left {
+    left: 5%;                         /* Left positioning */
+  }
+  
+  .face.right {
+    right: 5%;                        /* Right positioning */
+  }
+  
+  /* Chin Styles */
+  .chin {
+    width: 90%;                       /* Set width */
+    height: 70%;                      /* Set height */
+    background-color: var(--penguin-face); /* Background color from variable */
+    top: 25%;                         /* Top positioning */
+    left: 5%;                         /* Left positioning */
+    border-radius: 70% 70% 100% 100%; /* Border radius */
+  }
+  
+  /* Eye Styles */
+  .eye {
+    width: 15%;                       /* Set width */
+    height: 17%;                      /* Set height */
+    background-color: black;           /* Background color */
+    top: 45%;                         /* Top positioning */
+    border-radius: 50%;               /* Border radius for circle */
+  }
+  
+  .eye.left {
+    left: 25%;                        /* Left positioning */
+  }
+  
+  .eye.right {
+    right: 25%;                       /* Right positioning */
+  }
+  
+  /* Eye Lid Styles */
+  .eye-lid {
+    width: 150%;                      /* Set width */
+    height: 100%;                     /* Set height */
+    background-color: var(--penguin-face); /* Background color from variable */
+    top: 25%;                         /* Top positioning */
+    left: -23%;                       /* Left positioning */
+    border-radius: 50%;               /* Border radius for circle */
+  }
+  
+  /* Blush Styles */
+  .blush {
+    width: 15%;                       /* Set width */
+    height: 10%;                      /* Set height */
+    background-color: pink;            /* Background color */
+    top: 65%;                         /* Top positioning */
+    border-radius: 50%;               /* Border radius for circle */
+  }
+  
+  .blush.left {
+    left: 15%;                        /* Left positioning */
+  }
+  
+  .blush.right {
+    right: 15%;                       /* Right positioning */
+  }
+  
+  /* Beak Styles */
+  .beak {
+    height: 10%;                      /* Set height */
+    background-color: var(--penguin-picorna); /* Background color from variable */
+    border-radius: 50%;               /* Border radius for circle */
+  }
+  
+  .beak.top {
+    width: 20%;                       /* Set width */
+    top: 60%;                         /* Top positioning */
+    left: 40%;                        /* Left positioning */
+  }
+  
+  .beak.bottom {
+    width: 16%;                       /* Set width */
+    top: 65%;                         /* Top positioning */
+    left: 42%;                        /* Left positioning */
+  }
+  
+  /* Shirt Styles */
+  .shirt {
+    font: bold 25px Helvetica, sans-serif; /* Font styling */
+    top: 165px;                       /* Top positioning */
+    left: 127.5px;                    /* Left positioning */
+    z-index: 1;                       /* Z-index */
+    color: #6a6969;                   /* Text color */
+  }
+  
+  .shirt div {
+    font-weight: initial;             /* Reset font weight */
+    top: 22.5px;                      /* Top positioning */
+    left: 12px;                       /* Left positioning */
+  }
+  
+  /* Penguin Body Styles */
+  .penguin-body {
+    width: 53%;                       /* Set width */
+    height: 45%;                      /* Set height */
+    background: linear-gradient(      /* Gradient background */
+      45deg,
+      rgb(134, 133, 133) 0%,
+      rgb(234, 231, 231) 25%,
+      white 67%
+    );
+    border-radius: 80% 80% 100% 100%; /* Border radius */
+    top: 40%;                         /* Top positioning */
+    left: 23.5%;                      /* Left positioning */
+  }
+  
+  .penguin-body::before {
+    content: "";                      /* Empty content */
+    position: absolute;               /* Positioning */
+    width: 50%;                       /* Set width */
+    height: 45%;                      /* Set height */
+    background-color: var(--penguin-skin); /* Background color from variable */
+    top: 10%;                         /* Top positioning */
+    left: 25%;                        /* Left positioning */
+    border-radius: 0% 0% 100% 100%;   /* Border radius */
+    opacity: 70%;                     /* Opacity */
+  }
+  
+  /* Arm Styles */
+  .arm {
+    width: 30%;                       /* Set width */
+    height: 60%;                      /* Set height */
+    background: linear-gradient(      /* Gradient background */
+      90deg,
+      var(--penguin-skin),
+      rgb(209, 210, 199)
+    );
+    border-radius: 30% 30% 30% 120%;  /* Border radius */
+    z-index: -1;                      /* Z-index */
+  }
+  
+  .arm.left {
+    top: 35%;                         /* Top positioning */
+    left: 5%;                         /* Left positioning */
+    transform-origin: top left;       /* Transformation origin */
+    transform: rotate(130deg) scaleX(-1); /* Rotation and scale transformation */
+    animation: 3s linear infinite wave; /* Animation */
+  }
+  
+  .arm.right {
+    top: 0%;                          /* Top positioning */
+    right: -5%;                       /* Right positioning */
+    transform: rotate(-45deg);         /* Rotation transformation */
+  }
+  
+  /* Keyframes for Arm Animation */
+  @keyframes wave {
+    10% {
+      transform: rotate(110deg) scaleX(-1); /* Rotation and scale transformation */
+    }
+    20% {
+      transform: rotate(130deg) scaleX(-1); /* Rotation and scale transformation */
+    }
+    30% {
+      transform: rotate(110deg) scaleX(-1); /* Rotation and scale transformation */
+    }
+    40% {
+      transform: rotate(130deg) scaleX(-1); /* Rotation and scale transformation */
+    }
+  }
+  
+  /* Foot Styles */
+  .foot {
+    width: 15%;                       /* Set width */
+    height: 30%;                      /* Set height */
+    background-color: var(--penguin-picorna); /* Background color from variable */
+    top: 85%;                         /* Top positioning */
+    border-radius: 50%;               /* Border radius for circle */
+    z-index: -1;                      /* Z-index */
+  }
+  
+  .foot.left {
+    left: 25%;                        /* Left positioning */
+    transform: rotate(80deg);         /* Rotation transformation */
+  }
+  
+  .foot.right {
+    right: 25%;                       /* Right positioning */
+    transform: rotate(-80deg);        /* Rotation transformation */
+  }
+  
+  /* Ground Styles */
+  .ground {
+    width: 100vw;                     /* Full viewport width */
+    height: calc(100vh - 300px);      /* Calculate height */
+    background: linear-gradient(      /* Gradient background */
+      90deg,
+      rgb(88, 175, 236),
+      rgb(182, 255, 255)
+    );
+    z-index: 3;                       /* Z-index */
+    position: absolute;               /* Positioning */
+    margin-top: -58px;                /* Negative margin top */
+  }
+  
